@@ -1,0 +1,97 @@
+
+/*
+color fondo - #273E3D
+nav - #0F3534
+font - #4C6665
+nav:hover - #1A3B3A
+++algo - #3A5554
+*/
+/**/
+
+/*
+    ESTILOS GENERALES
+*/
+a > img{
+    width:70px;
+}
+body,a,p{
+    color:#4C6665;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+h1{
+    font-size: 1.4rem;
+}
+.logo{
+    display:flex;
+    flex-direction: row;
+}
+header{
+    height:130px;
+    display:flex;
+    background-color:#0f3534;
+    justify-content: space-between;
+    align-items:center;
+    padding-right: 10px;
+}
+main{
+    height:100vh;
+}
+body{
+    margin:0;
+    background-color: #273E3D;
+}
+/*
+    MOBILE FIRST
+*/
+.logo{
+    display:flex;
+    align-items: center;
+}
+button{
+    background-color:#3A5554;
+    color:white;
+    border-radius: 10px;
+}
+nav{
+    display:flex;
+    flex-direction: column;
+}
+.form, .services, .testimony, .sub{
+    padding-bottom:7px;
+}
+
+
+/*
+    TABLET & DESKTOP
+*/
+@media (min-width:576px){
+    h1{
+        font-size:2rem;
+    }
+    header{
+        height:100px;
+    }
+    
+    a > img{
+        width:90px;
+    }
+    a{
+        font-size:1.3rem;
+    }
+    button{
+        font-size:1.1rem;
+    }
+    nav{
+        flex-direction: row;
+    }
+    nav >a, .sub{
+        margin-left: 15px;
+        margin-right:15px;
+        align-items:baseline;
+    }
+
+}/*FIN DE MEDIAQUERY*/
+
+
+
