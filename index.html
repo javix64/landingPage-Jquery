@@ -8,49 +8,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <a href=""><img src="src/images/logo.webp" alt=""></a>
+            <h1>Holidays</h1>
+        </div>
+        <nav>
+            <a href="" class="services">Services</a>
+            <a href="" class="testimony">Testimony</a>
+            <a href="" class="form">Form</a>
+            <button class="sub">Subscribe</button>
+        </nav>
+    </header>
     <main class="hero">
-        <header>
-            <div class="logo">
-                <a href=""><img src="src/images/logo.webp" alt=""></a>
-                <h1>Web Scraping</h1>
-            </div>
-            <nav>
-                <a href="" class="form">Formulario</a>
-                <a href="" class="services">Servicios</a>
-                <a href="" class="testimony">Testimonios</a>
-                <button class="sub">Suscribir</button>
-            </nav>
-        </header>
-        
+        <video autoplay="true" loop="" muted="" playsinline="">
+            <source type="video/mp4" src="https://twindolphinloscabos.com/wp-content/themes/twin-dolphin/video/homepage/home-hero.mp4">
+        </video>
+        <div class="overlay-text">
+            <h2>Your Sweet Holidays</h2>
+            <p>Where your dreams come true</p>
+        </div>
     </main>
+    
     
     <!-- Crear dinamicante los servicios y testimonios-->
     <section class="servicios">
         <!-- 3 servicios-->
         <article>
-        <h2>Servicio Scraping basico</h2>     
-        </article>
-        <article>
-        <h2>Servicio Scraping medio</h2>     
-        </article>
-        <article>
-        <h2>Servicio Scraping avanzado</h2>     
+        <h2>Servicio Scraping basico</h2>   
         </article>
     </section>
     <section class="testimonios">
         <!-- 6 testimonios -->
         <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
     </section>
     <div class="formulario">
         <form action="">
-            
-            <!-- validar formularios con JQuery  -->
+            <label for="name">Name:</label><input type="text" id="name">
+            <label for="surname">Surname:</label><input type="text" id="surname">
+            <label for="email">Email:</label> <input type="email" id="email">
+            <label for="phone">Phone:</label> <input type="text" id="phone">
+            <label for="subject">Subject:</label> <input type="text" id="subject">
+            <label for="message">Message:</label> <textarea id="message" cols="30" rows="10"></textarea>
+            <button id="submit">Submit</button>
         </form>
     </div>
 <!-- 
