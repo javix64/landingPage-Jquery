@@ -29,6 +29,10 @@ h1{
     display:flex;
     flex-direction: row;
 }
+.logo > a > img{
+    border-radius: 50px;
+    margin-right:20px;
+}
 header{
     display: block;
     margin: auto;
@@ -110,11 +114,87 @@ input,label,textarea,form>button{
 input{
     height:30px;
 }
+/* PARA LAS WAVES*/
+.testimonios{
+    background-color:#0f3534;
+    margin-top:-30px;
+}
+svg{
+    margin-bottom:-6px;
+}
+form>button, article > button{
+    height:40px;
+}
+article> img{
+    height:200px;
+    width:200px;
+    
+}
+.service-art{
+    height:500px;
+    width:40%;
+    background-color:#606969;
+    margin:auto;
+    margin-top:2px;
+    margin-bottom:2px;
+    display:flex;
+    flex-direction: column;
+    margin-top:30px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.service-art > img, .service-art> h2{
+    margin:auto;
+}
+.service-art > h2{
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.service-art > button{
+    width:50%;
+    margin: auto;
+}
+.service-art > p {
+    text-align: justify;
+    padding-right:15px;
+    padding-left:15px;
+}
+
+
+.inside-services{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin:auto;
+    align-content: center;
+}
+
+.line{
+    width:80%;
+    margin:auto;
+    height:3px;
+    background-color: #8eb8b6;
+}
+.testimony-card{
+    background-color:#606969;
+    border-radius:10px;
+    width:300px;
+    height:400px;
+}
+.header > h2{
+    text-align:center;
+}
+/*servicios > articulos*/
 
 /*
     TABLET & DESKTOP
 */
-@media (min-width:576px){
+/*576 es para movil*/
+@media (min-width:1000px){
+    .logo > a > img{
+        margin-right:30px;
+    }
     h1{
         font-size:2rem;
     }
@@ -145,6 +225,23 @@ input{
         margin-top:10px;
         margin-bottom:10px;
     }
+    /*servicios > articulos*/
+    .service-art > article{
+        height:500px;
+        width:500px;
+    }
+    .inside-services {
+        width:70%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .service-art{
+        flex-direction: column;
+        margin-top:50px;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    /*testimonios > articulos*/
 
 }/*FIN DE MEDIAQUERY*/
 

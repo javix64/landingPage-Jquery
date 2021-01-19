@@ -1,0 +1,37 @@
+{
+"services":[
+    {"img":"https://www.iberobike.com/wp-content/uploads/2017/04/Danny-Hart.jpg",
+     "title":"Mountain Biking & Skills Course",
+     "text":"Miles of mountain biking trails cut through the dramatic mountain desert, offering technical terrain for professional and novice mountain bikers alike. Our 5,000-square-foot skills development course gives bikers the opportunity to improve their precision on our top-of-the-line Scott Bikes, and professional guides are also on hand to provide personalized instruction. ",
+     "line":"div",
+     "button":"button"
+    },
+    {"img":"https://www.es-paintball.com/Imagenes/mejores-tacticas-estrategias-jugar-a-paintball.jpg",
+        "title":"Paintball",
+        "text":"As the ultimate adrenaline-fueled playground, our paintball course is where members go all-out while competing with friends and family. You won’t just be dodging flying paintballs – obstacles include an abandoned boat, smoke bombs, and trip wires to make any game a true battle. "
+    },
+    {"img":"https://gohunt-assets-us-west-2.s3.amazonaws.com/media/shooting-hoyt-firstlite.jpg",
+        "title":"Archery & Axe Throwing",
+        "text":"Whether your instrument of choice is bow and arrow or axe, fully equipped archery and axe-throwing ranges await for you to sharpen your aim with a series of multiple targets. Members love to compete for glory on these courses in our very own Twin Dolphin Club Mini-Olympics. "
+    },
+    {"img":"https://1.bp.blogspot.com/-1vUW-BkCkl8/XZiNnYI32uI/AAAAAAABVzA/ORWVmvClXaciPb7NpRklIgxHTxlBSIZqwCKgBGAsYHg/s1600/IMG_1642.JPG",
+        "title":"Hiking Trails",
+        "text":"With over 1,100 acres and 10 miles of terrain, our hiking trails are much more than a walk in the park. Hikers are surrounded by unique desert flora, canyon-like arroyos, and unparalleled vistas on the onsite trail system, or those craving ocean views can hop on a dune buggy to access El Cielo viewpoint palapa and trails overlooking the Sea of Cortez. "
+    }
+],
+"testimony":[
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"},
+    {"img":"url","name":"name","text":"testimony"}
+    
+]
+}
