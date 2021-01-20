@@ -161,7 +161,7 @@ article> img{
 }
 .service-art{
     height:550px;
-    width:40%;
+    width:60%;
     background-color:#606969;
     margin:auto;
     margin-top:2px;
@@ -262,6 +262,9 @@ article> img{
     .service-art > article, .inside-testimonials > article{
         height:500px;
         width:500px;
+    }
+    .service-art{
+        width:40%;
     }
     .inside-services, .inside-testimonials {
         width:70%;

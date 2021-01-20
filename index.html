@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/main.css">
-    <title>Document</title>
+    <title>Landing Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
+    <header class="topi">
         <div class="logo">
             <a href=""><img src="src/images/logo.png" alt=""></a>
             <h1>Your Holidays</h1>
         </div>
         <nav>
-            <a href="#servicios" class="services">Services</a>
-            <a href="#testimonios" class="testimony">Testimony</a>
-            <a href="#formulario" class="form">
+            <a href="#" class="services" id="linkServicios" >Services</a>
+            <a href="#" class="testimony" id="linkTestimonios">Testimony</a>
+            <a href="#" class="form" id="linkButton">
             <button class="sub">Subscribe</button></a>
         </nav>
     </header>
@@ -34,7 +34,7 @@
     
     
     <!-- Crear dinamicante los servicios y testimonios-->
-    <section class="servicios" id="servicios">
+    <section class="servicios" id="servicios" name="servicios">
         <div class="header">
             <h2>Services</h2>
         </div>
@@ -71,7 +71,7 @@
     <!--
         Button go to start page
                                 -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><svg class="arrowUp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5 0 50 80" xml:space="preserve">
+    <button id="myBtn" title="Go to top"><svg class="arrowUp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5 0 50 80" xml:space="preserve">
         <polyline fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" points="
     0.375, 35.375 28.375, 0.375 58.67, 35.375 " />
       </svg></button> 

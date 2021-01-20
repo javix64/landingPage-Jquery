@@ -80,3 +80,26 @@ let testimonials=$.ajax({
 });
 //Formulario sencillo que debe ser validado por con JQuery
 
+
+//          Scroll
+function scrollToAnchor(aid){
+    var aTag = $("."+ aid +"");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+$('#linkTestimonios').click(function () { 
+    scrollToAnchor('testimonios');
+});
+$('#linkServicios').click(function () { 
+    scrollToAnchor('inside-services');
+});
+$('#linkButton').click(function () { 
+    scrollToAnchor('formulario');
+});
+$('#myBtn').click(function () { 
+        $('html,body').animate({scrollTop: 0},'slow');
+});
+
+// TO DO
+    //Recargar ajax cada 5 segundos cuando de error
+    // Validacion de formularios
+    // Ubicacion usuarios
