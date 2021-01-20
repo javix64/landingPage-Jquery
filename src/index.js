@@ -1,3 +1,17 @@
+//button go start
+let myButton = $('#myBtn')
+$(window).scroll(function () { scrollFunction()});
+function scrollFunction () {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        $(myButton).css('display','block');
+    }else{
+        $(myButton).css('display','none');
+    }
+}
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
 //ajax services
 $.ajax({
     type: "Get",
@@ -39,27 +53,13 @@ let testimonials=$.ajax({
             const name=$('<h3>').text(el.name);
             const text=$('<p>').text(el.text);
             const date=$('<p>').text(el.date).attr('style','text-align:center');
-            arrArticle.push(article);
-            /* function successFunction(data) {
-
-                var numberOfItems = data.d.results.length;
-              
-                var randItem = Math.floor(Math.random() * numberOfItems);
-              
-                var randText = data.d.results[randItem].QuoteText;
-                $('.quoteText').html(randText);
-              
-              } */
-
-            //let testimonials=$('.inside-testimonials').prepend(article);
             let art= $(article)
             .append(img)
             .append(name)
             .append(date)
             .append(text);
+            arrArticle.push(article);
         });
-        //tengo que poner 3 elementos random
-        //y prepend en section
         function giveMe(){
             let arrRandom=[];
             for (let i = 0; i < 3; i++) {
@@ -78,3 +78,5 @@ let testimonials=$.ajax({
         console.error("The information could not be obtained");
     }
 });
+//Formulario sencillo que debe ser validado por con JQuery
+

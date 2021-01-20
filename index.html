@@ -11,28 +11,30 @@
     <header>
         <div class="logo">
             <a href=""><img src="src/images/logo.png" alt=""></a>
-            <h1>Holidays</h1>
+            <h1>Your Holidays</h1>
         </div>
         <nav>
-            <a href="" class="services">Services</a>
-            <a href="" class="testimony">Testimony</a>
-            <a href="" class="form">Form</a>
-            <button class="sub">Subscribe</button>
+            <a href="#servicios" class="services">Services</a>
+            <a href="#testimonios" class="testimony">Testimony</a>
+            <a href="#formulario" class="form">
+            <button class="sub">Subscribe</button></a>
         </nav>
     </header>
     <main class="hero">
         <video autoplay="true" loop="" muted="" playsinline="">
             <source type="video/mp4" src="https://twindolphinloscabos.com/wp-content/themes/twin-dolphin/video/homepage/home-hero.mp4">
+                
         </video>
         <div class="overlay-text">
             <h2>Your Sweet Holidays</h2>
             <p>Where your dreams come true</p>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273e3d" fill-opacity="0.94" d="M0,256L48,224C96,192,192,128,288,133.3C384,139,480,213,576,245.3C672,277,768,267,864,250.7C960,235,1056,213,1152,213.3C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </main>
     
     
     <!-- Crear dinamicante los servicios y testimonios-->
-    <section class="servicios">
+    <section class="servicios" id="servicios">
         <div class="header">
             <h2>Services</h2>
         </div>
@@ -47,7 +49,7 @@
         <!-- 3 servicios-->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0f3534" fill-opacity="1" d="M0,128L40,160C80,192,160,256,240,277.3C320,299,400,277,480,229.3C560,181,640,107,720,74.7C800,43,880,53,960,64C1040,75,1120,85,1200,80C1280,75,1360,53,1400,42.7L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
     </section>
-    <section class="testimonios">
+    <section class="testimonios" id="testimonios">
         <div class="header">
             <h2>Testimony</h2>
         </div>
@@ -58,17 +60,21 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273e3d" fill-opacity="1" d="M0,128L40,144C80,160,160,192,240,218.7C320,245,400,267,480,261.3C560,256,640,224,720,218.7C800,213,880,235,960,213.3C1040,192,1120,128,1200,122.7C1280,117,1360,171,1400,197.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
     </section>
-    <div class="formulario">
+    <div class="formulario" id="formulario">
         <form action="">
-            <label for="name">Name:</label><input type="text" id="name">
-            <label for="surname">Surname:</label><input type="text" id="surname">
+            <label for="name">Name and surname:</label><input type="text" id="name">
             <label for="email">Email:</label> <input type="email" id="email">
-            <label for="phone">Phone:</label> <input type="text" id="phone">
             <label for="subject">Subject:</label> <input type="text" id="subject">
-            <label for="message">Message:</label> <textarea id="message" cols="30" rows="10"></textarea>
             <button id="submit">Submit</button>
         </form>
     </div>
+    <!--
+        Button go to start page
+                                -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><svg class="arrowUp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5 0 50 80" xml:space="preserve">
+        <polyline fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" points="
+    0.375, 35.375 28.375, 0.375 58.67, 35.375 " />
+      </svg></button> 
 <!-- 
      SCRIPT JS 
                -->
