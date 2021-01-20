@@ -126,9 +126,8 @@ form>button, article > button{
     height:40px;
 }
 article> img{
-    height:200px;
-    width:200px;
-    
+    height:300px;
+    width:300px;
 }
 .service-art{
     height:500px;
@@ -162,7 +161,7 @@ article> img{
 }
 
 
-.inside-services{
+.inside-services, .inside-testimonials{
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -186,7 +185,9 @@ article> img{
     text-align:center;
 }
 /*servicios > articulos*/
-
+.service-art > h3{
+    text-align: center;
+}
 /*
     TABLET & DESKTOP
 */
@@ -226,11 +227,12 @@ article> img{
         margin-bottom:10px;
     }
     /*servicios > articulos*/
-    .service-art > article{
+    /*testimonios > articulos*/
+    .service-art > article, .inside-testimonials > article{
         height:500px;
         width:500px;
     }
-    .inside-services {
+    .inside-services, .inside-testimonials {
         width:70%;
         flex-direction: row;
         flex-wrap: wrap;
@@ -241,8 +243,8 @@ article> img{
         padding-top:20px;
         padding-bottom:20px;
     }
-    /*testimonios > articulos*/
-
+    
+    
 }/*FIN DE MEDIAQUERY*/
 
 
