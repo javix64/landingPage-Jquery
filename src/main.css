@@ -61,7 +61,7 @@ header{
     left: 0px;
     height:130px;
     display:flex;
-    background-color:#0f3534;
+    background-color:rgba(15, 53, 52, 0.5);
     justify-content: space-between;
     align-items:center;
     padding-right: 10px;
@@ -117,7 +117,6 @@ main > video {
     width: auto;
     height: auto;
     z-index: -1;
-	-webkit-transition: 1s opacity;
 	display: block;
 }
 /* formulario*/
@@ -126,6 +125,7 @@ form{
     flex-direction: column;
     width:70%;
     margin:auto;
+    margin-top:50px;
 }
 input,label,textarea,form>button{
     margin-top:5px;
@@ -141,6 +141,7 @@ input{
 .testimonios{
     background-color:#0f3534;
     margin-top:-30px;
+    margin-bottom: 30px;
 }
 svg{
     margin-bottom:-6px;
@@ -150,17 +151,20 @@ svg{
     bottom:0;
     z-index:5
 }
+.formulario >svg{
+    margin-bottom: -29px;
+}
 
 /*Otros elementos*/
 form>button, article > button{
     height:40px;
 }
 article> img{
-    height:300px;
-    width:300px;
+    height:250px;
+    width:250px;
 }
 .service-art{
-    height:550px;
+    height:650px;
     width:60%;
     background-color:#606969;
     margin:auto;
@@ -191,15 +195,15 @@ article> img{
     padding-left:15px;
 }
 
-
 .inside-services, .inside-testimonials{
     display:flex;
     flex-direction:column;
     justify-content: center;
     margin:auto;
     align-content: center;
+    margin-top:20px;
 }
-
+/* line for separate title and text*/
 .line{
     width:80%;
     margin:auto;
@@ -219,6 +223,25 @@ article> img{
 .service-art > h3{
     text-align: center;
 }
+/* FOOTER and others elements*/
+footer{
+    background-color: #0f3534;
+}
+footer > h2, .formulario > h2{
+    text-align:center;
+}
+footer > iframe{
+    display:block;
+    margin:auto;
+    margin-top:50px;
+    padding-bottom: 100px;
+}
+footer > div:first-child, .formulario > div:first-child{
+    margin-top:50px;
+}
+
+
+
 /*
     TABLET & DESKTOP
 */

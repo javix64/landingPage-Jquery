@@ -24,7 +24,7 @@ $.ajax({
             const img=$('<img>').attr('src',el.img);
             const title=$('<h2>').text(el.title);
             const text=$('<p>').text(el.text);
-            const div=$('<div>');
+            const div=$('<div>').attr('class','line');
             const button=$('<button>').text('Select');
             $('.inside-services').prepend(article);
             $(article)
@@ -52,10 +52,12 @@ let testimonials=$.ajax({
             const img=$('<img>').attr('src',el.img);
             const name=$('<h3>').text(el.name);
             const text=$('<p>').text(el.text);
+            const line=$('<div>').attr('class','line');
             const date=$('<p>').text(el.date).attr('style','text-align:center');
             let art= $(article)
             .append(img)
             .append(name)
+            .append(line)
             .append(date)
             .append(text);
             arrArticle.push(article);
@@ -64,11 +66,17 @@ let testimonials=$.ajax({
             let arrRandom=[];
             for (let i = 0; i < 3; i++) {
                 let random= Math.floor( Math.random() * (arrArticle.length));
+                //here i have problems because if random generate two times the same number
+                //it doesn't show into the screen. I don't know why.
+                // so this is EASY( not the correctly) to solve this problem.
+                if (arrRandom.includes(random) && random <=10){
+                    random++;
+                }else if(arrRandom.includes(11)){
+                    random==0;
+                }
                 arrRandom.push(random);
             }
-            console.dir(arrRandom);
             for (let i = 0; i < arrRandom.length; i++) {
-                console.log(i);
                 $('.inside-testimonials').prepend(arrArticle[arrRandom[i]]);
             }
         }
@@ -78,7 +86,6 @@ let testimonials=$.ajax({
         console.error("The information could not be obtained");
     }
 });
-//Formulario sencillo que debe ser validado por con JQuery
 
 
 //          Scroll
@@ -100,6 +107,6 @@ $('#myBtn').click(function () {
 });
 
 // TO DO
-    //Recargar ajax cada 5 segundos cuando de error
+    // Recargar ajax cada 5 segundos cuando de error
     // Validacion de formularios
     // Ubicacion usuarios
