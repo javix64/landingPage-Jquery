@@ -67,6 +67,7 @@ let testimonials = $.ajax({
             arrArticle.push(article);
         });
         function giveMe(){
+            $('.inside-testimonials').empty();
             let arrRandom=[];
             for (let i = 0; i < 3; i++) {
                 let random= Math.floor( Math.random() * (arrArticle.length));
@@ -85,6 +86,12 @@ let testimonials = $.ajax({
             }
         }
         giveMe();
+        // Change testimonials every 12 sec
+        // Event click
+        $('#changeTestimonials').click(function(){
+            giveMe();
+        })
+        
         
     },error: function() {
         console.error("The information could not be obtained");

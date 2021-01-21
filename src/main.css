@@ -64,6 +64,15 @@ button go start html
 a > img{
     width:70px;
 }
+/* Change testimonials */
+#changeTestimonials{
+    margin:auto;
+    display:block;
+}
+.changeTestimonials{
+    margin-top:60px;
+}
+
 /* fonts */
 body,a,p{
     color:#8eb8b6;
