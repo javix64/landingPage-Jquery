@@ -9,18 +9,20 @@ function scrollFunction () {
     }
 }
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 } 
-//ajax services
+//          ajax services
 let services = $.ajax({
     type: "Get",
     url: "src/data.json",
     data: "data",
     dataType: "json",
+    timeout:5000,
     success: function (response) {
         $.each(response.services, function (index, el) { 
             const article=$('<article>').attr("class", "service-art");
+            $(article).addClass('articleService');
             const img=$('<img>').attr('src',el.img);
             const title=$('<h2>').text(el.title);
             const text=$('<p>').text(el.text);
@@ -39,16 +41,18 @@ let services = $.ajax({
         console.error("The information could not be obtained");
     }
 });
-//ajax testimonials
+//          ajax testimonials
 let arrArticle=[]
 let testimonials = $.ajax({
     type: "Get",
     url: "src/data.json",
     data: "data",
     dataType: "json",
+    timeout:5000,
     success: function (response) {
         $.each(response.testimony, function (index, el) { 
             const article=$('<article>').attr("class", "service-art");
+            $(article).addClass('articleTestimony');
             const img=$('<img>').attr('src',el.img);
             const name=$('<h3>').text(el.name);
             const text=$('<p>').text(el.text);
@@ -106,26 +110,79 @@ $('#myBtn').click(function () {
         $('html,body').animate({scrollTop: 0},'slow');
 });
 
-// TO DO
-    // Recargar ajax cada 5 segundos cuando de error
-    // Validacion de formularios
-    // Ubicacion usuarios
+
+
 //Imagenes de animaciones
-$(document).scroll(function (e) { 
+let animateArticleTestimony=$(document).scroll(function (e) { 
     let top  = window.pageYOffset + window.innerHeight,
-        isVisible = top > document.querySelector('.service-art > img').offsetTop;
+        isVisible = top > document.querySelector('.articleTestimony').offsetTop;
          
     if (isVisible) {
-        $('.inside-services > .service-art').addClass('animate');
+        $('.articleTestimony').addClass('animate');
 
     }
 });
-$(document).scroll(function (e) { 
+let animateArticleServices=$(document).scroll(function (e) { 
     let top  = window.pageYOffset + window.innerHeight,
-        isVisible = top > document.querySelector('.service-art > img').offsetTop;
+        isVisible = top > document.querySelector('.articleService').offsetTop;
          
     if (isVisible) {
-        $('.inside-testimonials > .service-art').addClass('animate');
-        
+        $('.articleService').addClass('animate');
+
+    }
+});
+
+//  LOCALIZACION
+if ("geolocation" in navigator){
+	navigator.geolocation.getCurrentPosition(function(position){ 
+		console.log("Tu localizacion es: \nLatitud : "+position.coords.latitude+". \nLongitud : "+ position.coords.longitude+ ". \nCiudad: Granada.");
+		});
+}else{
+	console.log("Browser doesn't support geolocation!");
+}
+
+//validar formularios
+let inputName= $('#name');
+let inputEmail= $('#email');
+let inputSubject= $('#subject');
+
+//poner email, subject, submit a disabled
+$('#email').attr('disabled','disabled');
+$('#subject').attr('disabled','disabled');
+$('#submit').attr('disabled','disabled');
+
+//metodos para comprobar.
+$('#name').keyup(function () {
+    let regexN = new RegExp("^[a-zA-Z]+$");
+    let inputN = inputName[0].value;
+    if(inputN.length>=3 && regexN.test(inputN)){
+    $('#email').removeAttr('disabled');
+    $('#name').css('border','5px solid green');
+    }else if(inputN.length<=2){
+        $('#email').attr('disabled','disabled');
+        $('#name').css('border','5px solid red');
+    }
+});
+$('#email').keyup(function (){
+    let regexE = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$")
+    let inputE = inputEmail[0].value;
+
+    if(inputE.length>=3 && regexE.test(inputE)){
+        $('#subject').removeAttr('disabled');
+        $('#email').css('border','5px solid green');
+    }else if(inputE.length<=2){
+        $('#subject').attr('disabled','disabled');
+        $('#email').css('border','5px solid red');
+    }
+});
+$('#subject').keyup(function () {
+    let regexS = new RegExp("^[a-zA-Z]+$");
+    let inputS = inputSubject[0].value;
+    if(inputS.length>=3 && regexS.test(inputS)){
+        $('#submit').removeAttr('disabled');
+        $('#subject').css('border','5px solid green');
+    }else if(inputS.length<=2){
+        $('#submit').attr('disabled','disabled');
+        $('#subject').css('border','5px solid red');
     }
 });

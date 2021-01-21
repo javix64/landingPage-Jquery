@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /*
 button go start html
 */
@@ -30,33 +31,32 @@ button go start html
 
 
 /*ANIMACION DE IMAGENES*/
-.service-art img{
-    opacity:0;
-}
+
+.articleTestimony img {
+    opacity: 0;
+  }
+  .articleService img {
+    opacity: 0;
+  }
+  
   @keyframes animation {
     100% {
       opacity: 1;
     }
   }
+  
+  .articleTestimony.animate img {
+    animation: animation 4s forwards;
+  }
+  .articleService.animate img {
+    animation: animation 4s forwards;
+  }
+  
 
-    .service-art.animate img, .service-art.animate img{
-        animation: animation .5s forwards;
-    }
-    .service-art >img:nth-child(1){
-        animation-delay: .5s;
-    }
-    .service-art >img:nth-child(2){
-        animation-delay: .2s;
-    }
-    .service-art >img:nth-child(3){
-        animation-delay: .3s;
-    }
-    .service-art >img:nth-child(4){
-        animation-delay: .1s;
-    }
-/*
-
-*/
+/* Input disabled*/
+#email:disabled, #subject:disabled, #submit:disabled{
+    background: #aaaaaa;
+}
 
 /*
     ESTILOS GENERALES
@@ -64,10 +64,14 @@ button go start html
 a > img{
     width:70px;
 }
+/* fonts */
 body,a,p{
     color:#8eb8b6;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
     text-decoration: none;
+}
+body,a,p,h2,h1,h3{
+    font-family: 'Nunito', sans-serif;
 }
 .overlay-text > p{
     color:white;
@@ -277,7 +281,11 @@ footer > div:first-child, .formulario > div:first-child{
     TABLET & DESKTOP
 */
 /*576 es para movil*/
-@media (min-width:1000px){
+@media (min-width:800px){
+    article> img{
+        height:400px;
+        width:400px;
+    }
     .logo > a > img{
         margin-right:30px;
     }
@@ -314,7 +322,7 @@ footer > div:first-child, .formulario > div:first-child{
     /*servicios > articulos*/
     /*testimonios > articulos*/
     .service-art > article, .inside-testimonials > article{
-        height:500px;
+        height:630px;
         width:500px;
     }
     .service-art{
