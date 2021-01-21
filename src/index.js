@@ -13,7 +13,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 //ajax services
-$.ajax({
+let services = $.ajax({
     type: "Get",
     url: "src/data.json",
     data: "data",
@@ -41,7 +41,7 @@ $.ajax({
 });
 //ajax testimonials
 let arrArticle=[]
-let testimonials=$.ajax({
+let testimonials = $.ajax({
     type: "Get",
     url: "src/data.json",
     data: "data",
@@ -110,3 +110,22 @@ $('#myBtn').click(function () {
     // Recargar ajax cada 5 segundos cuando de error
     // Validacion de formularios
     // Ubicacion usuarios
+//Imagenes de animaciones
+$(document).scroll(function (e) { 
+    let top  = window.pageYOffset + window.innerHeight,
+        isVisible = top > document.querySelector('.service-art > img').offsetTop;
+         
+    if (isVisible) {
+        $('.inside-services > .service-art').addClass('animate');
+
+    }
+});
+$(document).scroll(function (e) { 
+    let top  = window.pageYOffset + window.innerHeight,
+        isVisible = top > document.querySelector('.service-art > img').offsetTop;
+         
+    if (isVisible) {
+        $('.inside-testimonials > .service-art').addClass('animate');
+        
+    }
+});

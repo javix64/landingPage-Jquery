@@ -25,7 +25,38 @@ button go start html
       width:30px;
       height:30px;
   }
-/**/
+
+
+
+
+/*ANIMACION DE IMAGENES*/
+.service-art img{
+    opacity:0;
+}
+  @keyframes animation {
+    100% {
+      opacity: 1;
+    }
+  }
+
+    .service-art.animate img, .service-art.animate img{
+        animation: animation .5s forwards;
+    }
+    .service-art >img:nth-child(1){
+        animation-delay: .5s;
+    }
+    .service-art >img:nth-child(2){
+        animation-delay: .2s;
+    }
+    .service-art >img:nth-child(3){
+        animation-delay: .3s;
+    }
+    .service-art >img:nth-child(4){
+        animation-delay: .1s;
+    }
+/*
+
+*/
 
 /*
     ESTILOS GENERALES
@@ -160,12 +191,12 @@ form>button, article > button{
     height:40px;
 }
 article> img{
-    height:250px;
-    width:250px;
+    height:200px;
+    width:200px;
 }
 .service-art{
     height:650px;
-    width:60%;
+    width:80%;
     background-color:#606969;
     margin:auto;
     margin-top:2px;
