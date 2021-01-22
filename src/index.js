@@ -82,7 +82,6 @@ let testimonials = $.ajax({
             }
         }
         giveMe();
-        // Change testimonials every 12 sec
         // Event click
         $('#changeTestimonials').click(function(){
             giveMe();

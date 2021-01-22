@@ -132,6 +132,19 @@ body{
     left:20%;
     
 }
+/* 
+    PARA LAS TABLAS
+*/
+table,tr,td{
+    border-style:solid ;
+}
+td > img{
+    height:300px;
+    width:300px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
 /*
     MOBILE FIRST
 */
@@ -204,12 +217,12 @@ form>button, article > button{
     height:40px;
 }
 article> img{
-    height:200px;
-    width:200px;
+    height:300px;
+    width:300px;
 }
 .service-art{
     height:650px;
-    width:80%;
+    width:90%;
     background-color:#606969;
     margin:auto;
     margin-top:2px;
@@ -290,7 +303,8 @@ footer > div:first-child, .formulario > div:first-child{
     TABLET & DESKTOP
 */
 /*576 es para movil*/
-@media (min-width:800px){
+
+@media (min-width:1140px){
     article> img{
         height:400px;
         width:400px;
@@ -338,7 +352,7 @@ footer > div:first-child, .formulario > div:first-child{
         width:40%;
     }
     .inside-services, .inside-testimonials {
-        width:70%;
+        width:90%;
         flex-direction: row;
         flex-wrap: wrap;
     }
