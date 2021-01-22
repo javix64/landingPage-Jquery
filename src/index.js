@@ -69,18 +69,14 @@ let testimonials = $.ajax({
         function giveMe(){
             $('.inside-testimonials').empty();
             let arrRandom=[];
-            for (let i = 0; i < 3; i++) {
-                let random= Math.floor( Math.random() * (arrArticle.length));
-                //here i have problems because if random generate two times the same number
-                //it doesn't show into the screen. I don't know why.
-                // so this is EASY( not the correctly) to solve this problem.
-                if (arrRandom.includes(random) && random <=10){
-                    random++;
-                }else if(arrRandom.includes(11)){
-                    random==0;
+                for (let i = 0; i < 3; i++) {
+                  let num;
+                  do {
+                    num=Math.floor(Math.random()*(11));      
+                  } while (arrRandom.includes(num));
+                  arrRandom.push(num);
                 }
-                arrRandom.push(random);
-            }
+                console.log(arrRandom);
             for (let i = 0; i < arrRandom.length; i++) {
                 $('.inside-testimonials').prepend(arrArticle[arrRandom[i]]);
             }
